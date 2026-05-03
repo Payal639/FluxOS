@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>FluxOS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="desktop" style="display: none;">
+      <div id="desktop-icons" aria-label="Desktop icons"></div>
+      <div id="windows-layer"></div>
+
+      <div
+        id="context-menu"
+        class="menu hidden"
+        role="menu"
+        aria-hidden="true"
+      ></div>
+      <div id="start-menu" class="menu hidden" aria-hidden="true"></div>
+    </div>
+
+    <footer id="taskbar" style="display: none;">
+      <button id="start-button" class="taskbar-start" title="Start">⊞</button>
+      <div id="taskbar-windows" class="taskbar-windows"></div>
+      <div class="taskbar-right">
+        <button id="theme-toggle" class="taskbar-icon" title="Toggle theme">
+          ☾
+        </button>
+        <div id="clock" class="taskbar-clock">--:--</div>
+      </div>
+    </footer>
+
+    <div id="login-overlay">
+      <div class="login-card">
+        <h1>FluxOS</h1>
+        <div id="login-error" class="error-msg hidden">Invalid credentials</div>
+        <div class="login-fields">
+          <input type="text" id="login-username" placeholder="Username" autocomplete="off">
+          <input type="password" id="login-password" placeholder="Password">
+          <button id="login-btn">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
